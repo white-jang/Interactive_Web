@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>페이징</title>
+    <style>
+        body {
+            transition: all 2.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+            overflow: hidden;
+        }
+
+        .nav {
+            position: fixed;
+            left: 50%;
+            top: 46%;
+            transform: translate(-50%, -50%);
+        }
+
+        h1 {
+            font-size: 30px;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        button {
+            font-size: 20px;
+            padding: 10px 30px;
+            cursor: pointer;
+        }
+
+        section {
+            height: 100vh;
+            width: 100vw;
+            border-top: 2px dashed rgba(0, 0, 0, .5);
+        }
+    </style>
+    <script>
+        window.onload = function () {
+            let prevBtn = document.querySelector(".prevBtn");
+            let nextBtn = document.querySelector(".nextBtn");
+            let h1 = document.getElementsByTagName("h1")[0];
+            let bgColorArr = ["#85FFBD", "#FFFB7D", "#E0C3FC", "#00DBDE"];
+            let section = document.getElementsByTagName("section"); // 배열에 네 개의 섹션을 저장
+
+            let pageNum = 0;
+            let totalNum = section.length; // 컨텐츠가 있으므로 컨텐츠의 개수로
+
+            prevBtn.addEventListener("click", function () {
+                if (pageNum > 0) {
+                    pageNum--;
+                }
+                pageChangeFunc();
+            })
+            nextBtn.addEventListener("click", function () {
+                if (pageNum < totalNum - 1) {
+                    pageNum++;
+                }
+                pageChangeFunc();
+            })
+
+            function pageChangeFunc() {
+                h1.innerHTML = (pageNum + 1) + " 페이지 입니다.";
+                document.getElementsByTagName("body")[0].style.background = bgColorArr[pageNum];
+
+                // 방법이 두 가지
+
+                // window.scrollTo(0 , section[pageNum].offsetTop );
+                // overflow: hidden으로 감춰두었던 스크롤로 이동시키기
+                // 바로 해당 offsetTop으로 이동 (애니메이션 X)
+
+                window.scrollTo({
+                    top: section[pageNum].offsetTop,
+                    behavior: 'smooth',
+                    // 애니메이션 추가
+                })
+
+            }
+
+            //처음 실행
+            pageChangeFunc();
+        }
+    </script>
+</head>
+
+<body>
+    <div class="nav">
+        <button type="button" class="prevBtn">PREV</button>
+        <button type="button" class="nextBtn">NEXT</button>
+        <h1></h1>
+    </div>
+
+    <section>
+        <h2>page 1</h2>
+    </section>
+
+    <section>
+        <h2>page 2</h2>
+    </section>
+
+    <section>
+        <h2>page 3</h2>
+    </section>
+
+    <section>
+        <h2>page 4</h2>
+    </section>
+</body>
+
+</html>
