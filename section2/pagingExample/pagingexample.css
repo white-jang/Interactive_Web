@@ -1,0 +1,54 @@
+body {
+    overflow-x: hidden;
+    background-color: #000;
+}
+
+section {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    border-top: 1px dashed #333;
+}
+
+/* 본문 */
+section .innerWrap {
+    position: relative;
+    z-index: 100;
+    padding: 120px;
+    width: 340px;
+    margin-top: 50px;
+}
+
+/* 이미지 영역 활성 */
+section.active .image {
+    opacity: 1;
+}
+
+/* 이미지 */
+section .image {
+    position: fixed;
+    width: 90%;
+    right: -8%;
+    top: 5%;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+
+
+h1 {
+    color: #fff;
+    text-align: center;
+    margin-top: 40vh;
+    font-size: 60px;
+}
+
+h2 {
+    color: #333;
+}
+
+p {
+    color: #fff;
+    font-size: 16px;
+    line-height: 24px;
+}
