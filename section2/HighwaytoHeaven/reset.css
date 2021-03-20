@@ -1,0 +1,111 @@
+/* CSS 초기화 */
+
+html,
+body,
+div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+button,
+abbr,
+acronym,
+address,
+code,
+del,
+dfn,
+em,
+img,
+strong,
+sub,
+sup,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+hr {
+    margin: 0;
+    padding: 0;
+}
+
+form,
+fieldset,
+iframe {
+    border: 0
+}
+
+img,
+button {
+    border: 0 none;
+    vertical-align: top;
+}
+
+hr {
+    height: 0;
+    display: none
+}
+
+label,
+button {
+    cursor: pointer
+}
+
+header,
+footer,
+section,
+article,
+aside,
+nav,
+hgroup,
+details,
+menu,
+figure,
+figcaption {
+    display: block;
+    box-sizing: border-box;
+}
+
+textarea {
+    resize: none
+}
+
+a {
+    text-decoration: none
+}
+
+a:link,
+a:visited {
+    text-decoration: none
+}
+
+a:hover {
+    text-decoration: none
+}
+
+html,
+body {
+    height: 100%;
+}
