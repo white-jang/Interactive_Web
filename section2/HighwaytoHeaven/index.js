@@ -1,5 +1,5 @@
 let section = document.getElementsByTagName("section");
-let pointBtn = document.querySelectorAll(".pointWrap li");
+let pointBtn = document.querySelectorAll(".point-wrap li");
 let pageNum = 0;
 let totalNum = section.length;
 
