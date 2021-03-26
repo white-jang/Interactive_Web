@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;500;700&display=swap');
+@import url(//fonts.googleapis.com/earlyaccess/kopubbatang.css);
 
 @font-face {
     font-family: 'GongGothicBold';
@@ -78,7 +79,7 @@ section {
     pointer-events: none;
 }
 
-#first div.text-wrap {
+#first div.title-box {
     width: 100%;
     height: 100%;
     padding-top: 30vh;
@@ -86,7 +87,7 @@ section {
     text-align: center;
 }
 
-#first div.text-wrap h1 {
+#first div.title-box h1 {
     font-family: 'Lora', serif;
     font-weight: 700;
     font-size: 70px;
@@ -95,7 +96,7 @@ section {
     transition: all ease-in-out 1s 0s;
 }
 
-#first div.text-wrap h1:hover {
+#first div.title-box h1:hover {
     text-shadow: 6px -3px rgb(40 132 230);
 }
 
@@ -159,10 +160,27 @@ section {
 }
 
 #third {
-    background: linear-gradient(#99c1d2, #f6f9f4, #c4a584);
+    min-height: 100%;
     overflow: hidden;
 }
 
-#third div.lyrics-wrap span {
+#third div.lyrics-wrap {
+    position: relative;
+}
+
+#third div.lyrics-text-box {
+    position: absolute;
+    top: 10%;
+    left: 32%;
+    width: 500px;
+    height: 500px;
+    text-align: center;
+    overflow: hidden;
+}
+
+#third div.lyrics-text-box span {
     display: block;
+    font-family: 'KoPub Batang', serif;
+    font-size: 25px;
+    color: lemonchiffon;
 }
